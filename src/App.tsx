@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import LoginPage from "./pages/LoginPage.tsx";
+import HomePage from "./pages/HomePage.tsx";
 import Index from "./pages/Index.tsx";
 import BotsPage from "./pages/BotsPage.tsx";
 import OrdersPage from "./pages/OrdersPage.tsx";
@@ -12,7 +14,6 @@ import AnalyticsPage from "./pages/AnalyticsPage.tsx";
 import RiskPage from "./pages/RiskPage.tsx";
 import SubscriptionPage from "./pages/SubscriptionPage.tsx";
 import SettingsPage from "./pages/SettingsPage.tsx";
-import LoginPage from "./pages/LoginPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -24,7 +25,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/dashboard" element={<Index />} />
           <Route path="/bots" element={<BotsPage />} />
           <Route path="/orders" element={<OrdersPage />} />
           <Route path="/trades" element={<TradesPage />} />
@@ -33,7 +36,6 @@ const App = () => (
           <Route path="/risk" element={<RiskPage />} />
           <Route path="/subscription" element={<SubscriptionPage />} />
           <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
