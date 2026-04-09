@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import LoginPage from "./pages/LoginPage.tsx";
 import HomePage from "./pages/HomePage.tsx";
+import LoginPage from "./pages/LoginPage.tsx";
 import Index from "./pages/Index.tsx";
 import BotsPage from "./pages/BotsPage.tsx";
 import OrdersPage from "./pages/OrdersPage.tsx";
@@ -25,8 +25,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<Index />} />
           <Route path="/bots" element={<BotsPage />} />
           <Route path="/orders" element={<OrdersPage />} />
