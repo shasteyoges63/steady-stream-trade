@@ -25,7 +25,7 @@ const HowItWorksSection = () => {
               to={step.link}
               key={step.title}
               className="relative text-center group animate-slide-up cursor-pointer rounded-xl border border-transparent p-6 hover:border-primary/30 hover:bg-card/60 hover:shadow-[0_0_30px_hsl(172_66%_50%/0.08)] transition-all duration-500"
-              style={{ animationDelay: `${i * 0.15}s`, opacity: 0 }}
+              style={{ animationDelay: `${i * 0.15}s` }}
             >
               {/* Connector line */}
               {i < steps.length - 1 && (
