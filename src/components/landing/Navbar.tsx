@@ -39,12 +39,12 @@ const Navbar = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Link to="/login">
+          <Link to="/">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               Sign In
             </Button>
           </Link>
-          <Link to="/login">
+          <Link to="/">
             <Button size="sm" className="gradient-primary text-primary-foreground font-semibold">
               Get Started
             </Button>
@@ -75,10 +75,10 @@ const Navbar = () => {
               </a>
             ))}
             <div className="pt-3 border-t border-border space-y-2">
-              <Link to="/login" className="block">
+              <Link to="/" className="block">
                 <Button variant="outline" size="sm" className="w-full">Sign In</Button>
               </Link>
-              <Link to="/login" className="block">
+              <Link to="/" className="block">
                 <Button size="sm" className="w-full gradient-primary text-primary-foreground font-semibold">
                   Get Started
                 </Button>

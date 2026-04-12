@@ -12,26 +12,26 @@ const HeroSection = () => {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-8 animate-fade-in" style={{ animationDelay: "0.1s", opacity: 0 }}>
+        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-8 animate-fade-in">
           <Zap className="h-3.5 w-3.5 text-primary" />
           <span className="text-xs font-medium text-primary">Automated Market Making Platform</span>
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight animate-fade-in" style={{ animationDelay: "0.2s", opacity: 0 }}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight animate-fade-in">
           <span className="text-foreground">Automate Your</span>
           <br />
           <span className="text-gradient">Crypto Liquidity</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-in" style={{ animationDelay: "0.4s", opacity: 0 }}>
+        <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-in">
           Deploy intelligent market-making bots across exchanges. Maintain spread, generate volume, and stabilize token prices — all from one powerful dashboard.
         </p>
 
         {/* CTA */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.6s", opacity: 0 }}>
-          <Link to="/login">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
+          <Link to="/dashboard">
             <Button size="lg" className="gradient-primary text-primary-foreground font-semibold px-8 h-12 text-base group">
               Start Trading
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -54,7 +54,7 @@ const HeroSection = () => {
             <div
               key={stat.label}
               className="flex flex-col items-center gap-2 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm p-6 hover:border-primary/30 hover:bg-card/80 transition-all duration-300 animate-slide-up"
-              style={{ animationDelay: `${0.8 + i * 0.15}s`, opacity: 0 }}
+              style={{ animationDelay: `${0.3 + i * 0.15}s` }}
             >
               <stat.icon className="h-5 w-5 text-primary" />
               <span className="text-2xl font-bold text-foreground">{stat.value}</span>
