@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Zap, Eye, EyeOff } from "lucide-react";
+import ParticlesBackground from "@/components/landing/ParticlesBackground";
 
 const LoginPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -14,8 +15,10 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="w-full max-w-md p-8">
+    <div className="relative flex min-h-screen items-center justify-center bg-background">
+      <ParticlesBackground />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(172_66%_50%/0.08),transparent_60%)]" />
+      <div className="relative z-10 w-full max-w-md p-8 animate-fade-in">
         {/* Logo */}
         <div className="flex items-center justify-center gap-3 mb-8">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl gradient-primary">
